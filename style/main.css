@@ -1,5 +1,8 @@
+
+
 body {
     margin: 0;
+    background-color: #F09A9D;
 }
 
 /* Make EVERYTHING use border-box */
@@ -7,6 +10,10 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+page{
+    display: flex;
+    flex-wrap: wrap;
 }
 header, section, nav, main, article {
     display: block;
@@ -22,22 +29,91 @@ nav {
 }
 header {
     background-color: #B2D6FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main{
     background-color: #EAEDF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 section {
     background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+article {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Background colors */
 
 .bg-yellow {
     background-color: #F5CF8E;
+    float: left;
+    
 }
 .bg-purple {
     background-color: #C8C6FA;
+    float: left;
 }
 .bg-red {
     background-color: #F09A9D;
+    float:left;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body{
+        background-color:#F5CF8E;
+    }
+  section,
+  .bg-yellow,
+  .bg-purple,
+  .bg-red {
+    height: 250px;
+    width: 50%;
+      float:left;
+  }
+    header{
+        height: 200px;
+    }
+    main {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #B2D6FF;
+    }
+    page {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .bg-yellow,
+  .bg-purple,
+  .bg-red {
+    width: 33.3%;
+     
+  }
+  header {
+    height: 200px;
+  }
+
+section {
+  height: 200px;
+  order: 1;
+}
+main {
+    height: 300px;
+    order: 2;
+}
 }
